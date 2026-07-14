@@ -6,9 +6,18 @@
       <title> Pink Calculator </title>
       <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body class="pink">
     <div class="calculator">
+      <div class="top-bar">
       <h2>&#127800 Pink Calculator &#127800</h2>
+        <select id="theme" onchange="changeTheme()">
+        <option value="pink">Pink</option>
+        <option value="purple">Purple</option>
+        <option value="blue">Blue</option>
+        <option value="mint">Mint</option>
+        <option value="dark">Dark</option>
+        </select>
+      </div>
       <input type="text" id="display" readonly>
       <div class="buttons">
         <button class="special" onclick="clearDisplay()">C</button>
