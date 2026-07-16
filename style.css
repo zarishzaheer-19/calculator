@@ -27,3 +27,29 @@ body{
   align-items:center;
   margin-bottom:20px;
 }
+#theme{
+  border:none;
+  background:#ffd6e8;
+  padding:8px;
+  border-radius:10px;
+  cursor:pointer;
+}
+#display{
+  width:100%;
+  height:65px;
+  border:none;
+  border-radius:15px;
+  background:#fff5fa;
+  text-align:right;
+  padding:15px;
+  font-size:28px;
+  margin-bottom:20px;
+  color:#ff4d94;
+  box-shadow:inset 0 3px 8px rgba(0,0,0,.08);
+}
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(4,70px);
+  gap:18px;
+  justify-content:center;
+}
