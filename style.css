@@ -9,8 +9,11 @@
   --color-primary: #ff4d94;
   --color-accent: #ff8fb1;
   --color-equal: #ff1493;
+  --color-equal-hover: #ff0080;
   --color-special: #ff6fa8;
+  --color-special-hover: #ff5294;
   --color-operator: #ff4d94;
+  --color-operator-hover: #ff2d7a;
 
   /* Light Theme */
   --bg-gradient: linear-gradient(135deg, #ffd6e8, #ffeef6);
@@ -21,6 +24,7 @@
   --text-secondary: white;
   --shadow: 0 20px 50px rgba(255, 105, 180, 0.25);
   --shadow-inset: inset 0 3px 8px rgba(0, 0, 0, 0.08);
+  --shadow-button-hover: 0 8px 20px rgba(255, 105, 180, 0.2);
 
   /* Dimensions */
   --calculator-width: 390px;
@@ -104,6 +108,11 @@ body {
   transform: scale(1.05);
 }
 
+#theme:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
 /* =========================
    DISPLAY SCREEN
 ========================= */
@@ -153,16 +162,21 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 12px auto;
+  margin: calc(var(--button-gap) / 2) auto;
 }
 
 button:hover {
   transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+  box-shadow: var(--shadow-button-hover);
 }
 
 button:active {
   transform: scale(0.92);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 /* Button Color Variants */
@@ -171,7 +185,7 @@ button.equal {
 }
 
 button.equal:hover {
-  background: #ff0080;
+  background: var(--color-equal-hover);
 }
 
 button.special {
@@ -179,7 +193,7 @@ button.special {
 }
 
 button.special:hover {
-  background: #ff5294;
+  background: var(--color-special-hover);
 }
 
 button.operator {
@@ -187,7 +201,7 @@ button.operator {
 }
 
 button.operator:hover {
-  background: #ff2d7a;
+  background: var(--color-operator-hover);
 }
 
 /* Special Button Styles */
@@ -222,7 +236,7 @@ button.delete {
 ========================= */
 
 body.pink {
-  background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+  background: var(--bg-gradient);
 }
 
 /* =========================
@@ -235,7 +249,7 @@ body.purple {
   --color-primary: #a855f7;
   --color-accent: #d946ef;
   --bg-button: #d946ef;
-
+  --shadow-button-hover: 0 8px 20px rgba(168, 85, 247, 0.2);
   background: var(--bg-gradient);
 }
 
@@ -258,7 +272,7 @@ body.blue {
   --color-primary: #0ea5e9;
   --color-accent: #06b6d4;
   --bg-button: #0ea5e9;
-
+  --shadow-button-hover: 0 8px 20px rgba(14, 165, 233, 0.2);
   background: var(--bg-gradient);
 }
 
@@ -281,7 +295,7 @@ body.mint {
   --color-primary: #10b981;
   --color-accent: #14b8a6;
   --bg-button: #10b981;
-
+  --shadow-button-hover: 0 8px 20px rgba(16, 185, 129, 0.2);
   background: var(--bg-gradient);
 }
 
@@ -305,7 +319,7 @@ body.dark {
   --bg-button: #4b5563;
   --text-primary: #ffffff;
   --shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-
+  --shadow-button-hover: 0 8px 20px rgba(0, 0, 0, 0.4);
   background: var(--bg-gradient);
 }
 
@@ -334,19 +348,31 @@ body.dark button {
 }
 
 body.dark button:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-button-hover);
 }
 
 body.dark button.equal {
   background: #dc2626;
 }
 
+body.dark button.equal:hover {
+  background: #b91c1c;
+}
+
 body.dark button.special {
   background: #7c3aed;
 }
 
+body.dark button.special:hover {
+  background: #6d28d9;
+}
+
 body.dark button.operator {
   background: #6366f1;
+}
+
+body.dark button.operator:hover {
+  background: #4f46e5;
 }
 
 /* =========================
@@ -375,11 +401,11 @@ body.dark button.operator {
   }
 
   .top-bar h2 {
-    font-size: 24px;
+    font-size: clamp(20px, 6vw, 28px);
   }
 
   #display {
-    font-size: 24px;
+    font-size: clamp(20px, 5vw, 30px);
     height: 60px;
   }
 
