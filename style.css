@@ -57,33 +57,34 @@ body{
   width:100%;
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  gap:24px;
 }
 button{
-  width:50px;
-  height:50px;
+  width:44px;
+  height:44px;
   border:none;
   background:#ff8fb1;
   position:relative;
   transform:rotate(-45deg);
   cursor:pointer;
   transition:0.3s;
+  margin:12px auto;
 }
 button:before,
 button:after{
   content:"";
   position:absolute;
-  width:50px;
-  height:50px;
+  width:44px;
+  height:44px;
   background:inherit;
   border-radius:50%;
 }
 button::before{
-  top:-25px;
+  top:-22px;
   left:0;
 }
 button::after{
-  left:25px;
+  left:22px;
   top:0;
 }
 button span{
@@ -92,9 +93,11 @@ button span{
   left:50%;
   transform:translate(-50%,-50%) rotate(45deg);
   color:white;
-  font-size:20px;
+  font-size:18px;
   font-weight:bold;
   z-index:10;
+  width:100%;
+  text-align:center;
 }
 button:hover{
   transform:rotate(-45deg) scale(1.08);
