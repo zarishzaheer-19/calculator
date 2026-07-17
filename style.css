@@ -56,7 +56,7 @@ body{
   width:100%;
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  gap:12px;
   justify-items:center;
 }
 button{
@@ -79,11 +79,11 @@ button:after{
   border-radius:50%;
 }
 button::before{
-  top:-30px;
+  top:-27px;
   left:0;
 }
 button::after{
-  left:30px;
+  left:27px;
   top:0;
 }
 button span{
