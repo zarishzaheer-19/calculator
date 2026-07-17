@@ -115,3 +115,106 @@ button:hover{
 .operator::after{
   background:#ff4d94;
 }
+/* =========================
+   THEMES
+========================= */
+
+body.pink{
+    background:linear-gradient(135deg,#ffd6e8,#ffeef6);
+}
+
+body.purple{
+    background:linear-gradient(135deg,#ead7ff,#f6efff);
+}
+
+body.blue{
+    background:linear-gradient(135deg,#dbeafe,#eff6ff);
+}
+
+body.mint{
+    background:linear-gradient(135deg,#d1fae5,#ecfdf5);
+}
+
+body.dark{
+    background:linear-gradient(135deg,#1f2937,#111827);
+}
+
+body.dark .calculator{
+    background:#374151;
+}
+
+body.dark #display{
+    background:#1f2937;
+    color:#ffffff;
+}
+
+body.dark .top-bar h2{
+    color:#ffffff;
+}
+
+body.dark #theme{
+    background:#4b5563;
+    color:white;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.calculator{
+    animation:pop 0.6s ease;
+}
+
+@keyframes pop{
+    0%{
+        transform:scale(0.8);
+        opacity:0;
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+button:active{
+    transform:rotate(-45deg) scale(0.92);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:450px){
+
+    .calculator{
+        width:95%;
+        padding:20px;
+    }
+
+    .buttons{
+        gap:15px;
+    }
+
+    button{
+        width:60px;
+        height:60px;
+    }
+
+    button::before,
+    button::after{
+        width:60px;
+        height:60px;
+    }
+
+    button::before{
+        top:-30px;
+    }
+
+    button::after{
+        left:30px;
+    }
+
+    button span{
+        font-size:18px;
+    }
+}
