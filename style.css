@@ -53,3 +53,13 @@ body{
   gap:18px;
   justify-content:center;
 }
+button{
+  width:70px;
+  height:70px;
+  border:none;
+  background:#ff8fb1;
+  position:relative;
+  transform:rotate(-45deg);
+  cursor:pointer;
+  transitition:.3s;
+}
