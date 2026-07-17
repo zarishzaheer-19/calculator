@@ -60,8 +60,8 @@ body{
   justify-items:center;
 }
 button{
-  width:70px;
-  height:70px;
+  width:55px;
+  height:55px;
   border:none;
   background:#ff8fb1;
   position:relative;
@@ -73,8 +73,8 @@ button:before,
 button:after{
   content:"";
   position:absolute;
-  width:70px;
-  height:70px;
+  width:55px;
+  height:55px;
   background:inherit;
   border-radius:50%;
 }
