@@ -13,7 +13,9 @@ function calculate() {
         display.value = eval(display.value);
     } catch {
         display.value = "Error";
-    }function changeTheme() {
+    }
+}
+  function changeTheme() {
 
     const theme = document.getElementById("theme").value;
     const calculator = document.querySelector(".calculator");
