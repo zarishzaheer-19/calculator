@@ -26,6 +26,7 @@ body{
   align-items:center;
 }
 .top-bar{
+  width:100%;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -34,7 +35,7 @@ body{
 #theme{
   border:none;
   background:#ffd6e8;
-  padding:8px;
+  padding:8px 12px;
   border-radius:10px;
   cursor:pointer;
 }
@@ -60,29 +61,29 @@ body{
   margin-top:20px;
 }
 button{
-  width:70px;
-  height:70px;
+  width:60px;
+  height:60px;
   border:none;
   background:#ff8fb1;
   position:relative;
   transform:rotate(-45deg);
   cursor:pointer;
-  transitition:.3s;
+  transition:.3s;
 }
 button:before,button:after{
   content:"";
   position:absolute;
-  width:70px;
-  height:70px;
+  width:60px;
+  height:60px;
   background:#ff8fb1;
   border-radius:50%;
 }
-button::brfore{
-  top:-35px;
+button::before{
+  top:-30px;
   left:0;
 }
 button:after{
-  left:35px;
+  left:30px;
   top:0;
 }
 button span{
@@ -91,21 +92,29 @@ button span{
   left:50%;
   transform:translate(-50%,-50%) rotate(45deg);
   color:white;
-  font-size:22px;
+  font-size:20px;
   font-weight:bold;
-  z-index:5;
+  z-index:10;
 }
-button:hover,button:hover::before,button::after{
+button:hover,
+button:hover::before,
+button:hover::after{
   background:#ff4d04;
   transform:rotate(-45deg) scale(1.08);
 }
-.equal,equal::before,equal::after{
+.equal,
+.equal::before,
+.equal::after{
   background:#ff1493;
 }
 
-.special,speical::before,special::after{
+.special,
+.special::before,
+.special::after{
   background:#ff6fa8;
 }
-.operator,operator::before,operator::after{
+.operator,
+.operator::before,
+.operator::after{
   background:#ff5c93;
 }
