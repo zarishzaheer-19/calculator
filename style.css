@@ -163,6 +163,7 @@ button {
   justify-content: center;
   align-items: center;
   margin: calc(var(--button-gap) / 2) auto;
+   padding:15px 30px;
 }
 
 button:hover {
